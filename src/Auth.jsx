@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Navigate} from "react-router-dom";
+import Cookies from "js-cookie";
 
 export const Auth = ({ element, allowedRoles }) => {
     const [userRole, setUserRole] = useState(null);
@@ -27,7 +28,8 @@ export const Auth = ({ element, allowedRoles }) => {
             } finally {
                 setIsLoading(false);
         };
-        
+        const cokie=Cookies.get('mytoken')
+        console.log(cokie);
         Auth.propTypes = {
             element: PropTypes.element.isRequired,
             allowedRoles: PropTypes.arrayOf(PropTypes.string).isRequired,
