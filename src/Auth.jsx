@@ -29,7 +29,7 @@ export const Auth = ({ element, allowedRoles }) => {
                 setIsLoading(false);
         };
         const cokie=Cookies.get('mytoken')
-        console.log(cokie);
+        console.log("estas sonlas cookies de la libreria de jona"+cokie);
         Auth.propTypes = {
             element: PropTypes.element.isRequired,
             allowedRoles: PropTypes.arrayOf(PropTypes.string).isRequired,
