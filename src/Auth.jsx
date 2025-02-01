@@ -28,7 +28,7 @@ export const Auth = ({ element, allowedRoles }) => {
             } finally {
                 setIsLoading(false);
         };
-        const cokie=Cookies.get('mytoken')
+        const cokie=await Cookies.get('mytoken')
         console.log("estas sonlas cookies de la libreria de jona    "+cokie);
         Auth.propTypes = {
             element: PropTypes.element.isRequired,
